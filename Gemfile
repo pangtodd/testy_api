@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+#tjp add this, not sure if it's needed.
 gem 'jquery-rails'
 
 
@@ -38,6 +39,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+end
+
+group :test do
+  gem 'factory_bot_rails'
 end
 
 group :development do
