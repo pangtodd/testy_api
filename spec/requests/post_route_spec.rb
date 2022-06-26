@@ -2,6 +2,11 @@ require 'rails_helper'
 
 describe "post a quote route", :type => :request do
 
+  it 'returns an error if bad data is passed' do
+    post '/quotes', params: { :author => 'test_author', :content => '' }
+    expect(response).to have_http_status(422)
+  end
+
   before do
     post '/quotes', params: { :author => 'test_author', :content => 'test_content' }
   end
