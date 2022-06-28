@@ -6,7 +6,8 @@ ruby '2.6.5'
 #tjp add this, not sure if it's needed.
 gem 'jquery-rails'
 
-
+ #I added this one to try Swagger.
+gem 'rswag'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8'
 # Use postgresql as the database for Active Record
@@ -39,6 +40,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  #I added these 2 to try Swagger.
+  gem "rspec-rails"
+  gem "rswag-specs"
 end
 
 group :test do
